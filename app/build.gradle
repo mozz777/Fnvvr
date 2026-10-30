@@ -60,7 +60,11 @@ android {
         debug {
             minifyEnabled false
         }
-        // If you have a release build type, add it here
+        // fnvvr: optimized build, signed with the auto-generated debug key so it can be sideloaded
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.debug
+        }
     }
 
 
